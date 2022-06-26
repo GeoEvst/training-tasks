@@ -19,7 +19,7 @@ def is_valid(n_int, rang):
 
 
 def compare_with_number(n_int, random_num):
-    cls()
+    #cls()
     if n_int > random_num:
         print('Ваше число больше загаданного, попробуйте снова!')
     if n_int < random_num:
@@ -27,7 +27,7 @@ def compare_with_number(n_int, random_num):
     if n_int == random_num:
         print('Поздравляем!!!', '\n', 'Вы угадали!', sep='')
         return True
-    print(n_int)
+    #print(n_int)
 
 
 def start_game(rang):
@@ -69,16 +69,22 @@ def start_game(rang):
         elif n.lower() == 'изменить':
             select_a_range()
         else:
-            print('Ошибка: Введите число от 1 до', rang, 'включительно или "как", чтобы вызвать инструкцию,', '\n'
+            print('Ошибка: Введите целое число от 1 до', rang, 'включительно или "как", чтобы вызвать инструкцию,', '\n'
                   'Попытка ввода других символов приводит к ошибке.', '\n'
                   'Вы можете написать "Выход" чтобы завершить игру.')
 
 
 def select_a_range():
-    print('Введите число "n", это будет границей диапазона для загадывания чисел (от 1 до n).')
-    rang = int(input())
-    start_game(rang)
+    print('Введите целое число "n", это будет границей диапазона для загадывания чисел (от 1 до n).')
+    n = input()
+    if n.isdigit():
+        rang = int(n)
+        print(rang)
+        start_game(rang)
+    else:
+        print('Недопустимое значение')
+        select_a_range()
 
 
-print('Добро пожаловать в игру "Угадай число".')
+print('Добро пожаловать в игру "Угадай число"!')
 select_a_range()
