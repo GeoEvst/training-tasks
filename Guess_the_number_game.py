@@ -80,5 +80,5 @@ def select_a_range():
     start_game(rang)
 
 
-print('Добро пожаловать в игру "Угадай число"!')
+print('Добро пожаловать в игру "Угадай число".')
 select_a_range()
