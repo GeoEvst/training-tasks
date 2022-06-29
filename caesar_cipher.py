@@ -48,26 +48,6 @@ def hack(n):
 
 
 
-'''
-# выбор алфавита Eng или Rus
-def set_localization(shift_laue, n):
-    if shift_value.isdigit():
-        k = int(shift_value)
-        if loc == 0:
-            alphabet_shift = alphabet_shift_rus(k)
-            ciphertext = text_encryption(plaintext, alphabet_shift)
-            print(*ciphertext, sep='')
-        elif loc == 1:
-            alphabet_shift = alphabet_shift_eng(k, n)
-            ciphertext = text_encryption(plaintext, alphabet_shift)
-            print(*ciphertext, sep='')
-    elif shift_value.lower() == 'no':
-        for i in range(1, 26):
-            alphabet_shift = alphabet_shift_eng(i, n)
-            ciphertext = text_encryption(plaintext, alphabet_shift)
-            print(*ciphertext, sep='')'''
-
-
 print('Введите "0" если тест на русском языке, "1" если на английском')
 loc = int(input())
 chars = list()
