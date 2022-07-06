@@ -1,3 +1,4 @@
+import time
 from random import randint, sample
 digits = '0123456789'
 lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
@@ -83,3 +84,5 @@ config = set_conditions()
 n, lenght, chars = possible_values(config)
 password = generate_password(n, lenght, chars)
 print(*password, sep='\n')
+
+time.sleep(60)
